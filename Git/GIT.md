@@ -1,8 +1,11 @@
-Es un sistema de control de version distribuido.
+# GIT
+Git es un sistema de control de versiones distribuido.
 La informacion se almacena con un sistema de _key:value_, donde se utiliza la _key_ para acceder al _value_.
 
 ##### _Key_
-Es el hash de los datos a almacenar. Es un **SHA1**: una funcion hash criptografica, que genera un hash de 40 digitos (numero hexadecimal) => A un mismo input, la funcion generara el mismo hash para ese input. Esto significa que a partir del _value_ llego a la _key_, pero tambien a partir del _value_ puedo llegar a esa misma _key_.
+Es el hash de los datos a almacenar.   
+Es un **SHA1**: una funcion hash criptografica, que genera un hash de 40 digitos (numero hexadecimal) => A un mismo input, la funcion generara el mismo hash para ese input.   
+Esto significa que a partir del _value_ llego a la _key_, pero tambien a partir del _value_ puedo llegar a esa misma _key_.
 
 Para obtener el hash de un contendio:
 `eco 'Hello' | git hash-object --stdin`
@@ -14,7 +17,7 @@ Son los datos a almacenar, **comprimidos** en un blob + metadata, que contiene:
 * Delimitador `\0` <sub>string terminator en lenguaje C</sub>
 * Contenido
 
-![[Pasted image 20221214230258.png]]
+![](https://github.com/ckonata/Notes/blob/master/Git/Pasted%20image%2020221214230258.png)
 
 
 
